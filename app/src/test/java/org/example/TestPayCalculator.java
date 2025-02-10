@@ -24,4 +24,9 @@ public class TestPayCalculator {
     assertEquals(payCalulator.gross(1), 16.78);
   }
 
+  @Test
+  void itCalulatesThePayFortwo(){
+    assertEquals(payCalulator.gross(10), 167.80);
+  }
+
 }

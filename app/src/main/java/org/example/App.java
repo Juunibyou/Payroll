@@ -9,7 +9,7 @@ public class App {
 
     //User Input
     System.out.println("How many hours did you work? Enter: ");
-    double hours = scanner.nextInt();
+    double hours = scanner.nextDouble();
 
     System.out.println("How many depenencies do you have? Enter: ");
     int depend = scanner.nextInt();
@@ -20,11 +20,11 @@ public class App {
       double gross;
 
       //Gross earning
-        if(hours > 40){
-          overtime = Math.abs(40-hours)*1.5;
-          gross = (hours*16.78)+overtime;
-        }
-        else{gross = hours*16.78;}
+      if (hours > 40){
+        overtime = (hours - 40) * 1.5;
+        gross = (40 * 16.78) + overtime; 
+        } 
+      else {gross = hours * 16.78;}
 
       //Deduction
         double socialtax = (gross/100)*6;
