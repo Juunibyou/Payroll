@@ -14,24 +14,24 @@ public class App {
     System.out.println("How many depenencies do you have? Enter: ");
     int depend = scanner.nextInt();
     scanner.close();
-
-    //Calculate pay and deduction
-    double overtime = 0;
-    double gross;
+    
+      //Calculate pay and deduction
+      double overtime = 0;
+      double gross;
 
       //Gross earning
-      if(hours > 40){
-        overtime = Math.abs(40-hours)*1.5;
-        gross = (hours*16.78)+overtime;
-      }
-      else{gross = hours*16.78;}
+        if(hours > 40){
+          overtime = Math.abs(40-hours)*1.5;
+          gross = (hours*16.78)+overtime;
+        }
+        else{gross = hours*16.78;}
 
       //Deduction
-      double socialtax = (gross/100)*6;
-      double federaltax = (gross/100)*14;
-      double statetax = (gross/100)*5;
+        double socialtax = (gross/100)*6;
+        double federaltax = (gross/100)*14;
+        double statetax = (gross/100)*5;
 
-        //dependencies deduction
+      //dependencies deduction
         double insurance = 0;
         if(depend >= 3){insurance = 35;}
         else{insurance = 15;}
