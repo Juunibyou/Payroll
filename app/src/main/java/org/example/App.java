@@ -15,11 +15,10 @@ public class App {
     int depend = scanner.nextInt();
     scanner.close();
     
-      //Calculate pay and deduction
+      //Gross earning
       double overtime = 0;
       double gross;
 
-      //Gross earning
       if (hours > 40){
         overtime = (hours - 40) * 1.5;
         gross = (40 * 16.78) + overtime; 
